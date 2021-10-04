@@ -8,11 +8,33 @@
   <title>Chronometer</title>
   <link rel="stylesheet" href="./styles/normalize.css">
   <link rel="stylesheet" href="./styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/f2e0e49a34.js" crossorigin="anonymous"></script>
   <link rel="icon" href="./favicon.ico">
 </head>
 
 <body>
+  <main>
+    <div class="sphere">
+      <div class="stoptime">00:00</div>
+      <div class="buttons">
+        <a class="reset" href="#"><i class="fas fa-undo"></i></a>
+        <div class="stop" onclick="stop()"></div>
+        <div class="play" onclick="playPaused()"></div>
+      </div>
+    </div>
+    <div class="seconds-ball"></div>
+  </main>
+  <footer class="footer">
+    <p class="author">Alba Vidal</p>
+    <a class="link" href="mailto:albavidalm@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    <a class="link" href="https://www.linkedin.com/in/albavidalm/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a class="link" href="https://github.com/albavidalm" target="_blank"><i class="fab fa-github"></i></a>
+  </footer>
 
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

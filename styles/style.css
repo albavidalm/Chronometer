@@ -1,0 +1,146 @@
+body {
+  background-color: rgb(238, 240, 244);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  position: relative;
+}
+
+.sphere {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #eef0f4;
+  box-shadow: inset 7px 7px 14px #d4d6d9, inset -7px -7px 14px #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 26px;
+  color: rgba(96, 141, 226, 0.904);
+}
+
+.seconds-ball {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #cacccf, #ffffff);
+  box-shadow: 9.91px 9.91px 15px #d9dade, -9.91px -9.91px 15px #ffffff;
+  position: absolute;
+  top: 46%;
+  left: 45%;
+  animation: rotation 60s linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(-90deg) translate(150px);
+  }
+  to {
+    transform: rotate(270deg) translate(150px);
+  }
+}
+
+.buttons {
+  width: 70px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reset {
+  font-size: 15px;
+  margin-left: -4px;
+  margin-right: -5px;
+  color: rgba(96, 141, 226, 0.904);
+}
+
+.reset:hover {
+  transform: scale(0.9);
+  transition: all 0.4s ease;
+}
+
+.stop {
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+  background-color: rgba(96, 141, 226, 0.904);
+}
+.stop:hover {
+  transform: scale(0.9);
+  transition: all 0.4s ease;
+}
+
+.play {
+  height: 15px;
+  border-width: calc(15px / 2) 0 calc(15px / 2) 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-color: transparent transparent transparent rgba(96, 141, 226, 0.904);
+  transition: 100ms all ease;
+  will-change: border-width;
+  border-style: solid;
+}
+
+.play:hover {
+  transform: scale(0.9);
+  transition: all 0.4s ease;
+}
+
+.pause {
+  border-style: double;
+  border-width: 0 0 0 15px;
+}
+
+.pause:hover {
+  transform: scale(0.9);
+  transition: all 0.4s ease;
+}
+
+/* FOOTER*/
+.footer {
+  width: 100vw;
+  height: 40px;
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  color: rgba(96, 141, 226, 0.904);
+  font-weight: lighter;
+  z-index: 2000;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+}
+
+.author {
+  padding-right: 0.6rem;
+  font-family: "Maven Pro", sans-serif;
+}
+
+.fas,
+.fab {
+  padding-top: 0;
+  padding: 0.3rem;
+}
+
+.link,
+.link:visited {
+  color: rgba(96, 141, 226, 0.904);
+}
+
+.link:hover {
+  transform: scale(1.4);
+  transition: all 0.4s ease 0.1s;
+}

@@ -62,7 +62,7 @@ main {
   margin-left: -10px;
   margin-right: -11px;
   color: rgba(96, 141, 226, 0.904);
-  background: transparent;
+  background-color: transparent;
 }
 
 .resetbutton:hover {

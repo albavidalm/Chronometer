@@ -37,14 +37,18 @@ function stopWatch() {
 
 // Activa el botón Play Pause
 // Cambia el estilo del botón entre Play y Pause
+// Activa y desactiva el secundero
 const playPaused = () => {
   const isPaused = playPauseButton.classList.contains("pausebutton");
   if (isPaused) {
     window.clearInterval(interval);
     playPauseButton.classList.remove("pausebutton");
+    secondsBall.style.animationPlayState = "paused";
   } else {
     interval = window.setInterval(stopWatch, 1000);
     playPauseButton.classList.add("pausebutton");
+    secondsBall.style.animation = "rotation 60s linear infinite";
+    secondsBall.style.animationPlayState = "running";
   }
 };
 
@@ -56,4 +60,7 @@ const reset = () => {
   hours = "00";
   document.querySelector(".js-timer").innerHTML = "00:00:00";
   playPauseButton.classList.remove("pausebutton");
+  secondsBall.style.animationPlayState = "paused";
+  secondsBall.style.animation = "none";
+  secondsBall.style.transform = "rotate(-90deg) translate(150px)";
 };

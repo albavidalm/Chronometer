@@ -51,22 +51,26 @@ main {
   width: 70px;
   margin-top: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
-.reset {
+.resetbutton {
+  border: none;
+  cursor: pointer;
   font-size: 15px;
-  margin-left: -4px;
-  margin-right: -5px;
+  margin-left: -10px;
+  margin-right: -11px;
   color: rgba(96, 141, 226, 0.904);
 }
 
-.reset:hover {
+.resetbutton:hover {
   transform: scale(0.9);
   transition: all 0.4s ease;
+  color: rgba(135, 162, 212, 0.904);
 }
 
+/*
 .stop {
   height: 15px;
   width: 15px;
@@ -77,8 +81,9 @@ main {
   transform: scale(0.9);
   transition: all 0.4s ease;
 }
+*/
 
-.play {
+.playbutton {
   height: 15px;
   border-width: calc(15px / 2) 0 calc(15px / 2) 15px;
   cursor: pointer;
@@ -89,17 +94,18 @@ main {
   border-style: solid;
 }
 
-.play:hover {
+.playbutton:hover {
   transform: scale(0.9);
   transition: all 0.4s ease;
+  border-color: transparent transparent transparent rgba(135, 162, 212, 0.904);
 }
 
-.pause {
+.pausebutton {
   border-style: double;
   border-width: 0 0 0 15px;
 }
 
-.pause:hover {
+.pausebutton:hover {
   transform: scale(0.9);
   transition: all 0.4s ease;
 }

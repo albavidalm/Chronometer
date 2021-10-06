@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chronometer</title>
+  <title>Chrono</title>
   <link rel="stylesheet" href="./styles/normalize.css">
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,14 +18,14 @@
 <body>
   <main>
     <div class="sphere">
-      <div class="stoptime">00:00</div>
+      <div class="js-timer">00:00:00</div>
       <div class="buttons">
-        <a class="reset" href="#"><i class="fas fa-undo"></i></a>
-        <div class="stop" onclick="stop()"></div>
-        <div class="play" onclick="playPaused()"></div>
+        <button class="resetbutton js-reset" onclick="stop()"><i class="fas fa-undo"></i></button>
+        <!--<div class="stop js-stop" onclick="stop()"></div>-->
+        <div class="playbutton js-play" onclick="playPaused()"></div>
       </div>
     </div>
-    <div class="seconds-ball"></div>
+    <div class="seconds-ball js-seconds"></div>
   </main>
   <footer class="footer">
     <p class="author">Alba Vidal</p>

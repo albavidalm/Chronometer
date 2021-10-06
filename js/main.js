@@ -47,3 +47,13 @@ const playPaused = () => {
     playPauseButton.classList.add("pausebutton");
   }
 };
+
+// Activa el botón Reset, pone a 0 los valores y para el cronómetro
+const reset = () => {
+  window.clearInterval(interval);
+  seconds = "00";
+  minutes = "00";
+  hours = "00";
+  document.querySelector(".js-timer").innerHTML = "00:00:00";
+  playPauseButton.classList.remove("pausebutton");
+};
